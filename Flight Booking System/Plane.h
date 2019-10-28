@@ -7,6 +7,8 @@ class Plane {
 	public:
 		Plane();
 		~Plane();
+		void test();
 };
+
 
 #endif

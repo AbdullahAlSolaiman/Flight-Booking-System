@@ -4,6 +4,5 @@
 cmake_minimum_required (VERSION 3.8)
 
 # Add source to this project's executable.
-add_executable (CMakeTarget "Flight Booking System.cpp" "Flight Booking System.h")
-
+add_executable (CMakeTarget "Flight Booking System.cpp" "Flight Booking System.h" "Plane.cpp" "Plane.h")
 # TODO: Add tests and install targets if needed.

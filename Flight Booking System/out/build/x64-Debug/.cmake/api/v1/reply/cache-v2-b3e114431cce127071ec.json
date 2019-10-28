@@ -1026,6 +1026,30 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "FLight_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/build/x64-Debug"
+		},
+		{
+			"name" : "FLight_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System"
+		},
+		{
 			"name" : "Project_BINARY_DIR",
 			"properties" : 
 			[
