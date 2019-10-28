@@ -79,7 +79,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 
 //No help, variable specified on the command line.
-CMAKE_INSTALL_PREFIX:PATH=C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/install/x64-Debug
+CMAKE_INSTALL_PREFIX:PATH=C:/Users/Tareq/Source/Repos/Flight-Booking-System/Flight Booking System/out/install/x64-Debug
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64/link.exe
@@ -117,7 +117,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=Flight Booking System
 
 //RC compiler
 CMAKE_RC_COMPILER:FILEPATH=C:/Program Files (x86)/Windows Kits/10/bin/10.0.18362.0/x64/rc.exe
@@ -195,6 +195,18 @@ FLight_BINARY_DIR:STATIC=C:/Users/Tareq/source/repos/Flight-Booking-System/Fligh
 
 //Value Computed by CMake
 FLight_SOURCE_DIR:STATIC=C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System
+
+//Value Computed by CMake
+Flight Booking System_BINARY_DIR:STATIC=C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/build/x64-Debug
+
+//Value Computed by CMake
+Flight Booking System_SOURCE_DIR:STATIC=C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System
+
+//Value Computed by CMake
+Flight_BINARY_DIR:STATIC=C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/build/x64-Debug
+
+//Value Computed by CMake
+Flight_SOURCE_DIR:STATIC=C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System
 
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/build/x64-Debug

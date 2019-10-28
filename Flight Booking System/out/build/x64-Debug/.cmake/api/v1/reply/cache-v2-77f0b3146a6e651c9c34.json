@@ -511,7 +511,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/install/x64-Debug"
+			"value" : "C:/Users/Tareq/Source/Repos/Flight-Booking-System/Flight Booking System/out/install/x64-Debug"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -695,7 +695,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Project"
+			"value" : "Flight Booking System"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -1039,6 +1039,54 @@
 		},
 		{
 			"name" : "FLight_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System"
+		},
+		{
+			"name" : "Flight Booking System_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/build/x64-Debug"
+		},
+		{
+			"name" : "Flight Booking System_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System"
+		},
+		{
+			"name" : "Flight_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/build/x64-Debug"
+		},
+		{
+			"name" : "Flight_SOURCE_DIR",
 			"properties" : 
 			[
 				{
