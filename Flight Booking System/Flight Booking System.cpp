@@ -5,5 +5,7 @@
 
 int main() {
 	std::cout << "Hello CMake." << std::endl;
+	Plane myPlane();
+
 	return 0;
 }
