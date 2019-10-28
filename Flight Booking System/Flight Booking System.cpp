@@ -8,8 +8,11 @@ int main() {
 	Plane myPlane;
 	myPlane.test();
 
-	Passenger aPassenger;
-	aPassenger.test();
+	Passenger myPassenger;
+	myPassenger.test();
+
+	Flight myFlight;
+	myFlight.test();
 
 	return 0;
 }
