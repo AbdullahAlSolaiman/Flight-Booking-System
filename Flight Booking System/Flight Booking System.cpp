@@ -5,8 +5,11 @@
 int main() {
 	std::cout << "Hello world" << std::endl;
 	
-	Plane p2;
-	p2.test();
+	Plane myPlane;
+	myPlane.test();
+
+	Passenger myPassenger;
+	myPassenger.test();
 
 	return 0;
 }

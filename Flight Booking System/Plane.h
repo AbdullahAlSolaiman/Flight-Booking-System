@@ -1,4 +1,4 @@
-// Specification file for the Rectangle class.
+// Specification file for the Plane class
 #ifndef PLANE_H
 #define PLANE_H
 
@@ -9,6 +9,5 @@ class Plane {
 		~Plane();
 		void test();
 };
-
 
 #endif

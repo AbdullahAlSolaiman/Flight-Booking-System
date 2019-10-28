@@ -3,13 +3,13 @@
 #include <iostream>
 
 Plane::Plane() {
-	std::cout << "A plane has been created" << std::endl;
+	std::cout << "Plane has been created" << std::endl;
 }
 
 Plane::~Plane() {
-	std::cout << "A plane has been destroyed" << std::endl;
+	std::cout << "Plane has been destroyed" << std::endl;
 }
 
 void Plane::test() {
-	std::cout << "testing" << std::endl;
+	std::cout << "Testing Plane" << std::endl;
 }
