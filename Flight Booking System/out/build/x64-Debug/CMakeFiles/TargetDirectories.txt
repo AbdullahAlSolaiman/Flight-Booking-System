@@ -1,3 +1,0 @@
-C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/build/x64-Debug/CMakeFiles/CMakeTarget.dir
-C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Users/Tareq/source/repos/Flight-Booking-System/Flight Booking System/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
