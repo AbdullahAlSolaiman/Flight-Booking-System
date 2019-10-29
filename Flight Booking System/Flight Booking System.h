@@ -6,6 +6,7 @@
 #include <iostream>
 #include "Plane.h"
 #include "Passenger.h"
+#include "Flight.h"
 
 // TODO: Reference additional headers your program requires here.
 
