@@ -91,7 +91,7 @@ build CMakeTarget.exe: CXX_EXECUTABLE_LINKER__CMakeTarget CMakeFiles\CMakeTarget
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\Tareq\source\repos\TareqPi\temp\Flight Booking System\out\build\x64-Debug" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Tareq\source\repos\TareqPi\Flight-Booking-System\Flight Booking System\out\build\x64-Debug" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -102,7 +102,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\Tareq\source\repos\TareqPi\temp\Flight Booking System\out\build\x64-Debug" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -S"C:\Users\Tareq\source\repos\TareqPi\temp\Flight Booking System" -B"C:\Users\Tareq\source\repos\TareqPi\temp\Flight Booking System\out\build\x64-Debug""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Tareq\source\repos\TareqPi\Flight-Booking-System\Flight Booking System\out\build\x64-Debug" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -S"C:\Users\Tareq\source\repos\TareqPi\Flight-Booking-System\Flight Booking System" -B"C:\Users\Tareq\source\repos\TareqPi\Flight-Booking-System\Flight Booking System\out\build\x64-Debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
