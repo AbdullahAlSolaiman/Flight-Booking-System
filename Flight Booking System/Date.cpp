@@ -1,8 +1,6 @@
 // Implementation file for the Date class
 #include <iostream>
 #include "Date.h"
-using std::cout;
-using std::endl;
 
 Date::Date(int Day, int Month, int Year) {
 	_Day = Day;

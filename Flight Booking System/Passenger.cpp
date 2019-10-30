@@ -1,7 +1,7 @@
 // Implementation file for the Passenger class
+#include "Passenger.h"
 #include <iostream>
 #include <string>
-#include "Passenger.h"
 using std::cout;
 using std::string;
 using std::endl;

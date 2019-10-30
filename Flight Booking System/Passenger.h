@@ -1,24 +1,26 @@
 // Specification file for the Passenger class
-#include "Date.h"
 #ifndef PASSENGER_H
 #define PASSENGER_H
+#include "Date.h"
+#include <string>
+using std::string;
 
 class Passenger {
 private:
-	std::string _FirstName;
-	std::string _LastName;
+	string _FirstName;
+	string _LastName;
 	Date _DateOfBirth;     // object that has int day, int month, int year
-	std::string _PassportNumber;
+	string _PassportNumber;
 	
 public:
 	Passenger();
-	void SetFirstName(std::string fname);
-	void SetLastName(std::string lname);
-	void SetPassPortNumber(std::string passnum);
+	void SetFirstName(string fname);
+	void SetLastName(string lname);
+	void SetPassPortNumber(string passnum);
 
-	std::string GetFirstName() const;
-	std::string GetLastName() const;
-	std::string GetPassportNumber() const;
+	string GetFirstName() const;
+	string GetLastName() const;
+	string GetPassportNumber() const;
 
 	~Passenger();
 };
