@@ -1,0 +1,12 @@
+# ninja log v5
+10	850	594095832	CMakeFiles/CMakeTarget.dir/Passenger.cpp.obj	9094c5e9dbffb9a0
+14	853	594095832	CMakeFiles/CMakeTarget.dir/Flight.cpp.obj	599709a600856ed6
+0	854	594095832	CMakeFiles/CMakeTarget.dir/Flight_Booking_System.cpp.obj	d4fadce3dee2dd47
+6	855	594095832	CMakeFiles/CMakeTarget.dir/Plane.cpp.obj	d5514e6ea5a28fd7
+855	1629	594095832	CMakeTarget.exe	4008302569280e7d
+0	1139	594127189	CMakeFiles/CMakeTarget.dir/Flight_Booking_System.cpp.obj	d4fadce3dee2dd47
+5	1140	594127189	CMakeFiles/CMakeTarget.dir/Flight.cpp.obj	599709a600856ed6
+1140	1631	594127189	CMakeTarget.exe	4008302569280e7d
+1	1084	594130058	CMakeFiles/CMakeTarget.dir/Flight_Booking_System.cpp.obj	d4fadce3dee2dd47
+5	1158	594130058	CMakeFiles/CMakeTarget.dir/Flight.cpp.obj	599709a600856ed6
+1159	1763	594130059	CMakeTarget.exe	4008302569280e7d
