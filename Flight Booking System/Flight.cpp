@@ -31,7 +31,7 @@ void Flight::SetAirline(string Airline) {
 	_Airline = Airline;
 }
 
-string Flight::GetAirline() {
+string Flight::GetAirline() const {
 	return _Airline;
 }
 
@@ -39,7 +39,7 @@ void Flight::SetFlightID(string FlightID) {
 	_FlightID = FlightID;
 }
 
-string Flight::GetFlightID() {
+string Flight::GetFlightID() const {
 	return _FlightID;
 }
 
@@ -47,7 +47,7 @@ void Flight::SetFlightType(string FlightType) {
 	_FlightType = FlightType;
 }
 
-string Flight::GetFlightType() {
+string Flight::GetFlightType() const {
 	return _FlightType;
 }
 
@@ -55,7 +55,7 @@ void Flight::SetSource(string Source) {
 	_Source = Source;
 }
 
-string Flight::GetSource() {
+string Flight::GetSource() const {
 	return _Source;
 }
 
@@ -63,7 +63,7 @@ void Flight::SetDestination(string Destination) {
 	_Destination = Destination;
 }
 
-string Flight::GetDestination() {
+string Flight::GetDestination() const {
 	return _Destination;
 }
 
@@ -71,7 +71,7 @@ void Flight::SetPrice(float amount) {
 	_Price = amount;
 }
 
-float Flight::GetPrice() {
+float Flight::GetPrice() const {
 	return _Price;
 }
 
@@ -79,7 +79,7 @@ void Flight::SetArrivalTime(string time) {
 	_ArrivalTime = time;
 }
 
-string Flight::GetArrivalTime() {
+string Flight::GetArrivalTime() const {
 	return _ArrivalTime;
 }
 
@@ -87,7 +87,7 @@ void Flight::SetDepartureTime(string DepartureTime) {
 	_DepartureTime = DepartureTime;
 }
 
-string Flight::GetDepartureTime() {
+string Flight::GetDepartureTime() const {
 	return _DepartureTime;
 }
 
@@ -95,7 +95,7 @@ void Flight::SetPlane(Plane plane) {
 	_FlightPlane = &plane;
 }
 
-Plane Flight::GetPlane() {
+Plane Flight::GetPlane() const {
 	return *_FlightPlane;
 }
 
@@ -103,7 +103,7 @@ void Flight::SetDuration(float hours) {
 	_Duration = hours;
 }
 
-float Flight::GetDuration() {
+float Flight::GetDuration() const {
 	return _Duration;
 }
 

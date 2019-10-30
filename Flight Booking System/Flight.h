@@ -23,36 +23,36 @@ class Flight {
 		Flight();
 
 		void SetAirline(string);
-		string GetAirline();
+		string GetAirline() const;
 
 		void SetFlightID(string);
-		string GetFlightID();
+		string GetFlightID() const;
 
 		void SetFlightType(string);
-		string GetFlightType();
+		string GetFlightType() const;
 
 		void SetSource(string);
-		string GetSource();
+		string GetSource() const;
 
 		void SetDestination(string);
-		string GetDestination();
+		string GetDestination() const;
 
 		void SetDepartureTime(string);
-		string GetDepartureTime();
+		string GetDepartureTime() const;
 
 		void SetArrivalTime(string);
-		string GetArrivalTime();
+		string GetArrivalTime() const;
 
 		void SetDuration(float);
-		float GetDuration();
+		float GetDuration() const;
 
 		void SetPrice(float);
-		float GetPrice();
+		float GetPrice() const;
 
 		void SetPlane(Plane);
-		Plane GetPlane();
+		Plane GetPlane() const;
 
-		void PrintDetails();
+		void PrintDetails() const;
 
 		~Flight();
 };
