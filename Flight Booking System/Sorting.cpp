@@ -23,7 +23,7 @@ void Merge(Flight Array[], int First, int Mid, int Last) {
 	int Last2 = Last; // end of second subarray
 	int Index = First1; // next available location in tempArray
 	for (; (First1 <= Last1) && (First2 <= Last2); Index++) {
-		if (Array[First1] < Array[First2]) {
+		if (Array[First1].GetSource() < Array[First2].GetSource()) {
 			TempArray[Index] = Array[First1];
 			First1++;
 		}
