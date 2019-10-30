@@ -16,6 +16,7 @@ public:
 	int GetMonth()const;
 	int GetDay()const;
 	void test();
+	void test1();
 };
 
 #endif

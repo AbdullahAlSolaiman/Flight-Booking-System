@@ -17,6 +17,10 @@ void Date::test() {
 	std::cout << "Testing Date" << std::endl;
 }
 
+void Date::test1(){
+	std::cout << "test1";
+}
+
 void Date::setDay(int day) {
 	
 	_Day = day;
