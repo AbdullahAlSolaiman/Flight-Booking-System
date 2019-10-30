@@ -107,7 +107,7 @@ float Flight::GetDuration() const {
 	return _Duration;
 }
 
-void Flight::PrintDetails() {
+void Flight::PrintDetails() const {
 	cout << "\tAirline: " << GetAirline() << endl
 		<< "\tFlight ID: " << GetFlightID() << endl
 		<< "\tSource: " << GetSource() << endl
