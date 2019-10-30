@@ -62,7 +62,3 @@ Plane Flight::GetPlane() {
 Flight::~Flight() {
 	cout << "Flight has been destroyed" << endl;
 }
-
-void Flight::test() {
-	cout << "Testing Flight" << endl;
-}
