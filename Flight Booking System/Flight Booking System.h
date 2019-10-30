@@ -13,7 +13,7 @@ using std::cin;
 using std::endl;
 using std::string;
 
-void Menu();
+int MainMenu();
 
 // TODO: Reference additional headers your program requires here.
 

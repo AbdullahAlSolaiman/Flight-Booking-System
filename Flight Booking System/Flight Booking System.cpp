@@ -5,7 +5,7 @@
 int main() {
 	cout << "Hello world" << endl;
 
-	Menu();
+	int Choice = MainMenu();
 
 	Plane myPlane;
 	myPlane.test();
