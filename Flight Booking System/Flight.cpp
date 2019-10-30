@@ -77,10 +77,6 @@ string Flight::GetDepartureTime() {
 	return _DepartureTime;
 }
 
-float Flight::GetDuration() {
-	return _Duration;
-}
-
 void Flight::SetPlane(Plane plane) {
 	_FlightPlane = &plane;
 }
