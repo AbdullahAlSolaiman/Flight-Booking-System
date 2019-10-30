@@ -7,8 +7,9 @@ using std::endl;
 using std::string;
 
 
-Flight::Flight(string Source, string Destination, string FlightID, string DepartureTime, string ArrivalTime,
+Flight::Flight(string Airline, string Source, string Destination, string FlightID, string DepartureTime, string ArrivalTime,
 		float Price, float Duration, Plane FlightPlane) {
+	_Airline = Airline;
 	_FlightID = FlightID;
 	_Source = Source;
 	_Destination = Destination;
@@ -28,6 +29,14 @@ Flight::Flight() {
 	_Duration = 0.0;
 	_Price = 0.0;
 	_FlightPlane = NULL;
+}
+
+void Flight::SetAirline(string Airline) {
+	_Airline = Airline;
+}
+
+string Flight::GetAirline() {
+	return _Airline;
 }
 
 void Flight::SetFlightID(string FlightID) {
@@ -95,7 +104,8 @@ float Flight::GetDuration() {
 }
 
 void Flight::PrintDetails() {
-	cout << "Flight ID: " << GetFlightID() << endl
+	cout << "Airline: " << GetAirline() << endl
+		<< "Flight ID: " << GetFlightID() << endl
 		<< "Source: " << GetSource() << endl
 		<< "Destination: " << GetDestination() << endl
 		<< "Departure Time: " << GetDepartureTime() << endl
