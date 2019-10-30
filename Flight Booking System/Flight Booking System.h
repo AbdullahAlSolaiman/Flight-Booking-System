@@ -14,6 +14,10 @@ using std::endl;
 using std::string;
 
 int MainMenu();
+void PriceHighestToLowest(Flight[], int);
+void PriceLowestToHighest(Flight[], int);
+void DurationLongestToShortest(Flight[], int);
+void DurationShortestToLongest(Flight[], int);
 
 // TODO: Reference additional headers your program requires here.
 

@@ -7,10 +7,11 @@ using std::endl;
 using std::string;
 
 
-Flight::Flight(string Airline, string Source, string Destination, string FlightID, string DepartureTime, string ArrivalTime,
+Flight::Flight(string Airline, string FlightType ,string Source, string Destination, string FlightID, string DepartureTime, string ArrivalTime,
 		float Price, float Duration, Plane FlightPlane) {
 	_Airline = Airline;
 	_FlightID = FlightID;
+	_FlightType = FlightType;
 	_Source = Source;
 	_Destination = Destination;
 	_DepartureTime = DepartureTime;
@@ -21,7 +22,7 @@ Flight::Flight(string Airline, string Source, string Destination, string FlightI
 }
 
 Flight::Flight() {
-	_Airline = _FlightID = _Source = _Destination = _DepartureTime = _ArrivalTime = "N/A";
+	_Airline = _FlightID = _Source = _Destination = _DepartureTime = _ArrivalTime = "";
 	_Duration = _Price = 0.0;
 	_FlightPlane = NULL;
 }
@@ -40,6 +41,14 @@ void Flight::SetFlightID(string FlightID) {
 
 string Flight::GetFlightID() {
 	return _FlightID;
+}
+
+void Flight::SetFlightType(string FlightType) {
+	_FlightType = FlightType;
+}
+
+string Flight::GetFlightType() {
+	return _FlightType;
 }
 
 void Flight::SetSource(string Source) {
@@ -99,14 +108,14 @@ float Flight::GetDuration() {
 }
 
 void Flight::PrintDetails() {
-	cout << "Airline: " << GetAirline() << endl
-		<< "Flight ID: " << GetFlightID() << endl
-		<< "Source: " << GetSource() << endl
-		<< "Destination: " << GetDestination() << endl
-		<< "Departure Time: " << GetDepartureTime() << endl
-		<< "Arrival Time: " << GetArrivalTime() << endl
-		<< "Price: " << GetPrice() << endl
-		<< "Duration: " << GetDuration() << " hrs" << endl;
+	cout << "\tAirline: " << GetAirline() << endl
+		<< "\tFlight ID: " << GetFlightID() << endl
+		<< "\tSource: " << GetSource() << endl
+		<< "\tDestination: " << GetDestination() << endl
+		<< "\tDeparture Time: " << GetDepartureTime() << endl
+		<< "\tArrival Time: " << GetArrivalTime() << endl
+		<< "\tPrice: " << GetPrice() << endl
+		<< "\tDuration: " << GetDuration() << " hrs" << endl;
 }
 
 Flight::~Flight() {

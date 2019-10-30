@@ -10,15 +10,16 @@ class Flight {
 	private:
 		float _Price;
 		float _Duration;
-		string _FlightID;
 		string _Airline;
+		string _FlightID;
+		string _FlightType;
 		string _Source;
 		string _Destination;
 		string _DepartureTime;
 		string _ArrivalTime;
 		Plane* _FlightPlane;
 	public:
-		Flight(string, string, string, string, string, string, float, float, Plane);
+		Flight(string, string, string, string, string, string, string, float, float, Plane);
 		Flight();
 
 		void SetAirline(string);
@@ -26,6 +27,9 @@ class Flight {
 
 		void SetFlightID(string);
 		string GetFlightID();
+
+		void SetFlightType(string);
+		string GetFlightType();
 
 		void SetSource(string);
 		string GetSource();
