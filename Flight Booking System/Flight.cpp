@@ -1,5 +1,6 @@
 // Implementation file for the Flight class
 #include <iostream>
+#include <iomanip>
 #include "Flight.h"
 using std::cout;
 using std::endl;
@@ -91,6 +92,16 @@ void Flight::SetDuration(float hours) {
 
 float Flight::GetDuration() {
 	return _Duration;
+}
+
+void Flight::PrintDetails() {
+	cout << "Flight ID: " << GetFlightID() << endl
+		<< "Source: " << GetSource() << endl
+		<< "Destination: " << GetDestination() << endl
+		<< "Departure Time: " << GetDepartureTime() << endl
+		<< "Arrival Time: " << GetArrivalTime() << endl
+		<< "Price: " << GetPrice() << endl
+		<< "Duration: " << GetDuration() << " hrs" << endl;
 }
 
 Flight::~Flight() {

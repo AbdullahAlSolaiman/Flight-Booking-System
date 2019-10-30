@@ -44,6 +44,8 @@ class Flight {
 		void SetPlane(Plane);
 		Plane GetPlane();
 
+		void PrintDetails();
+
 		~Flight();
 };
 
