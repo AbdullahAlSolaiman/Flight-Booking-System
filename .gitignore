@@ -338,11 +338,7 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-/Flight Booking System/out/build/x64-Debug/.cmake/api/v1/reply/cache-v2-94f0e3effef2ccfda386.json
-/Flight Booking System/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-770f186ab950b61dd5f9.json
-/Flight Booking System/out/build/x64-Debug/.cmake/api/v1/reply/cmakeFiles-v1-1f223d064020d7df4c14.json
-/Flight Booking System/out/build/x64-Debug/.cmake/api/v1/reply/index-2019-10-30T09-57-11-0158.json
-/Flight Booking System/out/build/x64-Debug/.cmake/api/v1/reply/target-CMakeTarget-Debug-cb121a3fc58341b5b11f.json
-/Flight Booking System/out/build/x64-Debug/.cmake/api/v1/query/client-MicrosoftVS/query.json
+
+/Flight Booking System/out/build/x64-Debug/.cmake
 /Flight Booking System/out/build/x64-Debug/.ninja_deps
 /Flight Booking System/out/build/x64-Debug/.ninja_log

@@ -4,9 +4,16 @@
 #define FLIGHT_BOOKING_SYSTEM_H
 
 #include <iostream>
+#include <string>
 #include "Plane.h"
 #include "Passenger.h"
 #include "Flight.h"
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+
+void Menu();
 
 // TODO: Reference additional headers your program requires here.
 
