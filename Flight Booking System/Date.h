@@ -3,20 +3,17 @@
 #define DATE_H
 
 class Date {
-private:
-	int _Day, _Month, _Year;
-public:
-	Date(int day=0, int month=0, int year=0);
-	~Date();
-	void setDay(int day);
-	void setMonth(int month);
-	void setYear(int year);
-
-	int GetDay()const;
-	int GetMonth()const;
-	int GetDay()const;
-	void test();
-	void test1();
+	private:
+		int _Day, _Month, _Year;
+	public:
+		Date(int, int, int);
+		Date();
+		void SetDay(int);
+		int GetDay() const;
+		void SetMonth(int);
+		int GetMonth() const;
+		void SetYear(int);
+		int GetYear() const;
 };
 
 #endif

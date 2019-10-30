@@ -7,6 +7,9 @@
 #include "Plane.h"
 #include "Passenger.h"
 #include "Flight.h"
+#include "Date.h"
+
+using std::cout;
 
 // TODO: Reference additional headers your program requires here.
 

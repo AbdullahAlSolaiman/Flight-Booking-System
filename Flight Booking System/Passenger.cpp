@@ -1,33 +1,38 @@
 // Implementation file for the Passenger class
 #include <iostream>
+#include <string>
 #include "Passenger.h"
+using std::cout;
+using std::string;
+using std::endl;
 
 Passenger::Passenger() {
-	std::cout << "Passenger has been created" << std::endl;
+	cout << "Passenger has been created" << endl;
+}
+
+void Passenger::SetFirstName(string FirstName) {
+	_FirstName = FirstName;
+}
+void Passenger::SetLastName(string LastName) {
+	_LastName = LastName;
+}
+
+void Passenger::SetPassPortNumber(string PassNum) {
+	_PassportNumber = PassNum;
+}
+
+string Passenger::GetFirstName() const {
+	return _FirstName;
+}
+
+string Passenger::GetLastName() const {
+	return _LastName;
+}
+
+string Passenger::GetPassportNumber() const {
+	return _PassportNumber;
 }
 
 Passenger::~Passenger() {
-	std::cout << "Passenger has been destroyed" << std::endl;
+	cout << "Passenger has been destroyed" << endl;
 }
-
-void Passenger::test() {
-	std::cout << "Testing Passenger" << std::endl;
-}
-
-
-
-void Passenger::SetFirstName(std::string fname) {
-	_FirstName = fname;
-}
-void Passenger::SetLastName(std::string lname) {
-	_LastName = lname;
-}
-
-void Passenger::SetPassPortNumber(std::string passnum) {
-	_PassportNumber = passnum;
-}
-
-std::string Passenger::GetFirstName()const { return _FirstName; }
-std::string Passenger::GetLastName()const { return _LastName; }
-std::string Passenger::GetPassportNumber()const { return _PassportNumber; }
-
