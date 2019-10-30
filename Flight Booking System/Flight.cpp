@@ -29,6 +29,30 @@ Flight::Flight() {
 	_FlightPlane = NULL;
 }
 
+void Flight::SetFlightID(string FlightID) {
+	_FlightID = FlightID;
+}
+
+string Flight::GetFlightID() {
+	return _FlightID;
+}
+
+void Flight::SetSource(string Source) {
+	_Source = Source;
+}
+
+string Flight::GetSource() {
+	return _Source;
+}
+
+void Flight::SetDestination(string Destination) {
+	_Destination = Destination;
+}
+
+string Flight::GetDestination() {
+	return _Destination;
+}
+
 void Flight::SetPrice(float amount) {
 	_Price = amount;
 }
@@ -37,7 +61,7 @@ float Flight::GetPrice() {
 	return _Price;
 }
 
-void Flight::SetArrivalTime(std::string time) {
+void Flight::SetArrivalTime(string time) {
 	_ArrivalTime = time;
 }
 
@@ -45,8 +69,12 @@ string Flight::GetArrivalTime() {
 	return _ArrivalTime;
 }
 
-void Flight::SetDuration(float hours) {
-	_Duration = hours;
+void Flight::SetDepartureTime(string DepartureTime) {
+	_DepartureTime = DepartureTime;
+}
+
+string Flight::GetDepartureTime() {
+	return _DepartureTime;
 }
 
 float Flight::GetDuration() {
@@ -59,6 +87,14 @@ void Flight::SetPlane(Plane plane) {
 
 Plane Flight::GetPlane() {
 	return *_FlightPlane;
+}
+
+void Flight::SetDuration(float hours) {
+	_Duration = hours;
+}
+
+float Flight::GetDuration() {
+	return _Duration;
 }
 
 Flight::~Flight() {
