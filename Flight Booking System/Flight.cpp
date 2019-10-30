@@ -6,8 +6,9 @@ using std::endl;
 using std::string;
 
 
-Flight::Flight(string Source, string Destination, string DepartureTime, string ArrivalTime,
+Flight::Flight(string Source, string Destination, string FlightID, string DepartureTime, string ArrivalTime,
 		float Price, float Duration, Plane FlightPlane) {
+	_FlightID = FlightID;
 	_Source = Source;
 	_Destination = Destination;
 	_DepartureTime = DepartureTime;
@@ -18,6 +19,7 @@ Flight::Flight(string Source, string Destination, string DepartureTime, string A
 }
 
 Flight::Flight() {
+	_FlightID = "N/A";
 	_Source = "N/A";
 	_Destination = "N/A";
 	_DepartureTime = "N/A";
@@ -60,5 +62,5 @@ Plane Flight::GetPlane() {
 }
 
 Flight::~Flight() {
-	cout << "Flight has been destroyed" << endl;
+	_FlightPlane = NULL;
 }
