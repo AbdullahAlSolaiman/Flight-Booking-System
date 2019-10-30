@@ -5,8 +5,26 @@ using std::cout;
 using std::endl;
 using std::string;
 
+
+Flight::Flight(string Source, string Destination, string DepartureTime, string ArrivalTime,
+		float Price, float Duration, Plane FlightPlane) {
+	_Source = Source;
+	_Destination = Destination;
+	_DepartureTime = DepartureTime;
+	_ArrivalTime = ArrivalTime;
+	_Price = Price;
+	_Duration = Duration;
+	_FlightPlane = &FlightPlane;
+}
+
 Flight::Flight() {
-	_Price = _Duration = 0.0;
+	_Source = "N/A";
+	_Destination = "N/A";
+	_DepartureTime = "N/A";
+	_ArrivalTime = "N/A";
+	_Duration = 0.0;
+	_Price = 0.0;
+	_FlightPlane = NULL;
 }
 
 void Flight::SetPrice(float amount) {

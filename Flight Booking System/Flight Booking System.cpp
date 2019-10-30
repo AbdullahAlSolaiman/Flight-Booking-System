@@ -4,6 +4,7 @@
 
 int main() {
 	cout << "Hello world" << endl;
+	Flight Flights[10];
 
 	int Choice = MainMenu();
 
@@ -12,9 +13,6 @@ int main() {
 
 	Passenger myPassenger;
 	myPassenger.test();
-
-	Flight myFlight;
-	myFlight.test();
 
 	return 0;
 }
