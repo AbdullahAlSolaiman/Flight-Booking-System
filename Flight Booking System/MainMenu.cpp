@@ -10,7 +10,7 @@ int MainMenu() {
 		<< "1. Book a Flight" << endl
 		<< "2. View Booked Flights" << endl
 		<< "3. Delete a Booked Flight" << endl
-		<< "4. Exit"
+		<< "4. Exit" << endl
 		<< "---------------------------" << endl
 		<< "Choice: ";
 		int Choice;
