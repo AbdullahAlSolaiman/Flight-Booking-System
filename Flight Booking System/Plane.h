@@ -28,6 +28,7 @@ class Plane {
 		string getAirline();
 
 		Plane();
+		Plane(int PlaneNumber, int PlaneType, int PlaneModel, string name, int ManufacturerNumber, string AirlineName);
 		~Plane();
 		void test();
 };

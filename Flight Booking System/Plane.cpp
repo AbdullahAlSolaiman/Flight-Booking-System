@@ -9,6 +9,16 @@ using std::string;
 
 Plane::Plane() {
 	_AircraftInstanceID = _AircraftTypeID = _AircraftModelID = _ManufacturerID=0;
+	_ManufacturerName = "N\A";
+	_Airline = "N\A";
+}
+Plane::Plane(int PlaneNumber, int PlaneType, int PlaneModel, string name, int ManufacturerNumber, string AirlineName) {
+	_AircraftInstanceID = PlaneNumber;
+	_AircraftTypeID = PlaneType;
+	_AircraftModelID = PlaneModel;
+	_ManufacturerID = ManufacturerNumber;
+	_ManufacturerName = name;
+	_Airline = AirlineName;
 }
 void Plane::setAircraftInstanceID(int PlaneNumber)
 {
