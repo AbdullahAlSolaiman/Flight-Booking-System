@@ -11,7 +11,7 @@ class Flight {
 		float _Price;
 		float _Duration;
 		string _FlightID;
-		stirng _Airline;
+		string _Airline;
 		string _Source;
 		string _Destination;
 		string _DepartureTime;

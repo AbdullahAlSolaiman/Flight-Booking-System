@@ -21,13 +21,8 @@ Flight::Flight(string Airline, string Source, string Destination, string FlightI
 }
 
 Flight::Flight() {
-	_FlightID = "N/A";
-	_Source = "N/A";
-	_Destination = "N/A";
-	_DepartureTime = "N/A";
-	_ArrivalTime = "N/A";
-	_Duration = 0.0;
-	_Price = 0.0;
+	_Airline = _FlightID = _Source = _Destination = _DepartureTime = _ArrivalTime = "N/A";
+	_Duration = _Price = 0.0;
 	_FlightPlane = NULL;
 }
 
