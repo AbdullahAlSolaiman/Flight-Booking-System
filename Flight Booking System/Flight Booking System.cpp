@@ -84,7 +84,6 @@ int main() {
 			cout << "Choice: ";
 			cin >> Choice;
 			Users[ID].BookFlight(Result[Choice - 1]);
-			delete [] Result;
 			goto TryAgain;
 		}
 		case 2: {
