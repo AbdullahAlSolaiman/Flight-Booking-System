@@ -26,4 +26,5 @@ void LoadData(Flight Flights[]) {
 		Flights[Num].SetPlane(PlaneName);
 		Flights[Num++].SetDate(Day, Month, Year);
 	}
+	Read.close();
 }

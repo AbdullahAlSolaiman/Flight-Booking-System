@@ -113,6 +113,6 @@ int main() {
 			goto TryAgain;
 		}
 	}
-
+	delete [] Flights;
 	return 0;
 }
