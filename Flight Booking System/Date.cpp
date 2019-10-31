@@ -1,32 +1,39 @@
 // Implementation file for the Date class
 #include <iostream>
+#include <string>
 #include "Date.h"
+using std::string;
+using std::cout;
+using std::endl;
 
-Date::Date(int Day, int Month, int Year) {
+Date::Date(string Day, string Month, string Year) {
 	_Day = Day;
 	_Month = Month;
 	_Year = Year;
 }
 Date::Date() {
-	_Day = 0;
-	_Month = 0;
-	_Year = 0;
+	_Day = "1";
+	_Month = "1";
+	_Year = "2000";
 }
-void Date::SetDay(int Day) {
+void Date::SetDay(string Day) {
 	_Day = Day;
 }
-void Date::SetMonth(int Month) {
+void Date::SetMonth(string Month) {
 	_Month = Month;
 }
-void Date::SetYear(int Year) {
+void Date::SetYear(string Year) {
 	_Year = Year;
 }
-int Date::GetYear() const {
+string Date::GetYear() const {
 	return _Year;
 }
-int Date::GetDay() const {
+string Date::GetDay() const {
 	return _Day; 
 }
-int Date::GetMonth() const { 
-	return _Month; 
+string Date::GetMonth() const { 
+	return _Month;
+}
+void Date::PrintDate() const {
+	cout << GetDay() << "/" << GetMonth() << "/" << GetYear() << endl;
 }

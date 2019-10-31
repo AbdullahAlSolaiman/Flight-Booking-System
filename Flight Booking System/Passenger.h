@@ -2,7 +2,9 @@
 #ifndef PASSENGER_H
 #define PASSENGER_H
 #include "Date.h"
+#include "Flight.h"
 #include <string>
+#define MaxFlights 7
 using std::string;
 
 class Passenger {
@@ -11,7 +13,8 @@ private:
 	string _LastName;
 	Date _DateOfBirth;     // object that has int day, int month, int year
 	string _PassportNumber;
-	
+	Flight* BookedFlights[MaxFlights];
+	int NumOfFlights;
 public:
 	Passenger();
 	void SetFirstName(string fname);
@@ -22,6 +25,8 @@ public:
 	string GetLastName() const;
 	string GetPassportNumber() const;
 
+	void BookFlight(Flight);
+	void CancelFlight(string);
 	~Passenger();
 };
 #endif

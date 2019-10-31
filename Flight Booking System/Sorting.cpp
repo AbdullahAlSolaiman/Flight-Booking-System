@@ -41,7 +41,7 @@ void Merge(Flight Array[], int First, int Mid, int Last) {
 	for (Index = First; Index <= Last; ++Index)
 		Array[Index] = TempArray[Index];
 
-	delete TempArray;
+	delete [] TempArray;
 }
 
 void PriceLowestToHighest(Flight Array[], int ArraySize) {

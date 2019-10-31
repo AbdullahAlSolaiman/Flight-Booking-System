@@ -7,24 +7,28 @@ using std::endl;
 using std::string;
 
 
-Flight::Flight(string Airline, string FlightType ,string Source, string Destination, string FlightID, string DepartureTime, string ArrivalTime,
-		float Price, float Duration, Plane FlightPlane) {
+Flight::Flight(string Airline, string FlightType, string Source, string Destination, string FlightID,
+	 float Price, float Duration, Plane FlightPlane) {
 	_Airline = Airline;
 	_FlightID = FlightID;
 	_FlightType = FlightType;
 	_Source = Source;
 	_Destination = Destination;
-	_DepartureTime = DepartureTime;
-	_ArrivalTime = ArrivalTime;
 	_Price = Price;
 	_Duration = Duration;
 	_FlightPlane = &FlightPlane;
 }
 
 Flight::Flight() {
-	_Airline = _FlightID = _Source = _Destination = _DepartureTime = _ArrivalTime = "";
+	_Airline = _FlightType = _Source = _FlightID = _Destination = "";
 	_Duration = _Price = 0.0;
 	_FlightPlane = NULL;
+}
+
+void Flight::SetDate(string Day, string Month, string Year) {
+	_DepartureDate.SetDay(Day);
+	_DepartureDate.SetMonth(Month);
+	_DepartureDate.SetYear(Year);
 }
 
 void Flight::SetAirline(string Airline) {
@@ -75,22 +79,6 @@ float Flight::GetPrice() const {
 	return _Price;
 }
 
-void Flight::SetArrivalTime(string time) {
-	_ArrivalTime = time;
-}
-
-string Flight::GetArrivalTime() const {
-	return _ArrivalTime;
-}
-
-void Flight::SetDepartureTime(string DepartureTime) {
-	_DepartureTime = DepartureTime;
-}
-
-string Flight::GetDepartureTime() const {
-	return _DepartureTime;
-}
-
 void Flight::SetPlane(Plane plane) {
 	_FlightPlane = &plane;
 }
@@ -110,12 +98,13 @@ float Flight::GetDuration() const {
 void Flight::PrintDetails() const {
 	cout << "\tAirline: " << GetAirline() << endl
 		<< "\tFlight ID: " << GetFlightID() << endl
+		<< "\tFlight Type: " << GetFlightType() << endl
 		<< "\tSource: " << GetSource() << endl
 		<< "\tDestination: " << GetDestination() << endl
-		<< "\tDeparture Time: " << GetDepartureTime() << endl
-		<< "\tArrival Time: " << GetArrivalTime() << endl
 		<< "\tPrice: " << GetPrice() << endl
-		<< "\tDuration: " << GetDuration() << " hrs" << endl;
+		<< "\tDuration: " << GetDuration() << " hrs" << endl
+		<< "\tDeparture Date: ";
+	_DepartureDate.PrintDate();
 }
 
 Flight::~Flight() {

@@ -3,20 +3,9 @@
 #include "Flight Booking System.h"
 
 int main() {
-	int Size = 10;
+	int Size = 27;
 	Flight* Flights = new Flight[Size];
-	Flights[0].SetDuration(3);
-	Flights[1].SetDuration(4);
-	Flights[2].SetDuration(1);
-	Flights[3].SetDuration(5);
-	Flights[4].SetDuration(2);
-
-	Flights[0].SetPrice(300);
-	Flights[1].SetPrice(400);
-	Flights[2].SetPrice(100);
-	Flights[3].SetPrice(500);
-	Flights[4].SetPrice(200);
-
+	LoadData(Flights);
 	TryAgain:
 	int Choice = MainMenu();
 	
@@ -32,7 +21,7 @@ int main() {
 			getline(cin, Destination);
 			cout << endl;
 			
-			cout << "Sort it based on price or duration? (p/d): ";
+			cout << "Sort it base on price or duration? (p/d): ";
 			char POrD;
 			cin >> POrD;
 			if ('p' == POrD) {

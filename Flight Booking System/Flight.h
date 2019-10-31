@@ -3,6 +3,7 @@
 #define FLIGHT_H
 
 #include "Plane.h"
+#include "Date.h"
 #include <string>
 using std::string;
 
@@ -15,12 +16,13 @@ class Flight {
 		string _FlightType;
 		string _Source;
 		string _Destination;
-		string _DepartureTime;
-		string _ArrivalTime;
+		Date _DepartureDate;
 		Plane* _FlightPlane;
 	public:
-		Flight(string, string, string, string, string, string, string, float, float, Plane);
+		Flight(string, string, string, string, string, float, float, Plane);
 		Flight();
+
+		void SetDate(string, string, string);
 
 		void SetAirline(string);
 		string GetAirline() const;
@@ -36,12 +38,6 @@ class Flight {
 
 		void SetDestination(string);
 		string GetDestination() const;
-
-		void SetDepartureTime(string);
-		string GetDepartureTime() const;
-
-		void SetArrivalTime(string);
-		string GetArrivalTime() const;
 
 		void SetDuration(float);
 		float GetDuration() const;
