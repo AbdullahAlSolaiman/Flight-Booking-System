@@ -15,6 +15,7 @@ using std::endl;
 using std::string;
 
 int MainMenu();
+void MergeSort(Flight[], int, int);
 void PriceHighestToLowest(Flight[], int);
 void PriceLowestToHighest(Flight[], int);
 void DurationLongestToShortest(Flight[], int);

@@ -12,27 +12,10 @@ void LoadData(Flight Flights[]) {
 	}
 	int Num = 0;
 	string Day, Month, Year, Airline, FlightID, FlightType, Source, Destination, planeName, Price, Duration;
-//	getline(Read, Day, '/');
-//	getline(Read, Month, '/');
-//	getline(Read, Year, ',');
-//	getline(Read, Airline, ',');
-//	getline(Read, FlightID, ',');
-//	getline(Read, FlightType, ',');
-//	getline(Read, Source, ',');
-//	getline(Read, Destination, ',');
-//	getline(Read, planeName, ',');
-//	getline(Read, Price, ',');
-//	getline(Read, Duration);
-
-//	std::cout << Day << endl << Month << endl << Year << endl << Airline << endl << FlightID 
-//			 << endl << FlightType << endl << Source << endl << Destination << endl << planeName << endl
-//			<< Price << endl << Duration 
-//			<< endl;
-	//
 	
-	while (getline(Read, Day, '/') && getline(Read, Month, '/') && getline(Read, Year, ',') &&
-		getline(Read, Airline, ',') && getline(Read, FlightID, ',') && getline(Read, FlightType, ',') &&
-		getline(Read, Source, ',') && getline(Read, Destination, ',') && getline(Read, planeName, ',') && getline(Read, Price, ',') && getline(Read, Duration)) {
+	while (getline(Read, Day, '/') && getline(Read, Month, '/') && getline(Read, Year, ',') && getline(Read, Airline, ',') && 
+		getline(Read, FlightID, ',') && getline(Read, FlightType, ',') && getline(Read, Source, ',') && getline(Read, Destination, ',')
+		&& getline(Read, planeName, ',') && getline(Read, Price, ',') && getline(Read, Duration)) {
 		Flights[Num].SetAirline(Airline);
 		Flights[Num].SetFlightID(FlightID);
 		Flights[Num].SetFlightType(FlightType);

@@ -6,6 +6,7 @@ int main() {
 	int Size = 27;
 	Flight* Flights = new Flight[Size];
 	LoadData(Flights);
+	MergeSort(Flights, 0, Size - 1); //Order all the flights alphabetically
 	TryAgain:
 	int Choice = MainMenu();
 	
@@ -20,6 +21,7 @@ int main() {
 			string Destination;
 			getline(cin, Destination);
 			cout << endl;
+
 			
 			cout << "Sort it base on price or duration? (p/d): ";
 			char POrD;
