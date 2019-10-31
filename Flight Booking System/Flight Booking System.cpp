@@ -92,7 +92,7 @@ int main() {
 		}
 		case 3: {
 			Users[ID].ViewBookedFlights();
-			cout << "Enter the number of the flight that you wish to cancel: ";
+			cout << "Enter the flight ID that you wish to cancel: ";
 			string CancelNum;
 			cin.ignore();
 			getline(cin, CancelNum);
