@@ -11,11 +11,11 @@ void LoadData(Flight Flights[]) {
 		exit(-1);
 	}
 	int Num = 0;
-	string Day, Month, Year, Airline, FlightID, FlightType, Source, Destination, planeName, Price, Duration;
+	string Day, Month, Year, Airline, FlightID, FlightType, Source, Destination, PlaneName, Price, Duration;
 	
 	while (getline(Read, Day, '/') && getline(Read, Month, '/') && getline(Read, Year, ',') && getline(Read, Airline, ',') && 
 		getline(Read, FlightID, ',') && getline(Read, FlightType, ',') && getline(Read, Source, ',') && getline(Read, Destination, ',')
-		&& getline(Read, planeName, ',') && getline(Read, Price, ',') && getline(Read, Duration)) {
+		&& getline(Read, PlaneName, ',') && getline(Read, Price, ',') && getline(Read, Duration)) {
 		Flights[Num].SetAirline(Airline);
 		Flights[Num].SetFlightID(FlightID);
 		Flights[Num].SetFlightType(FlightType);
@@ -23,7 +23,7 @@ void LoadData(Flight Flights[]) {
 		Flights[Num].SetDestination(Destination);
 		Flights[Num].SetPrice(std::stof(Price));
 		Flights[Num].SetDuration(std::stof(Duration));
-		//Flights[Num].GetPlane->SetModel(planeName);
+		Flights[Num].SetPlane(PlaneName);
 		Flights[Num++].SetDate(Day, Month, Year);
 	}
 }

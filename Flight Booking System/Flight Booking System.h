@@ -5,7 +5,6 @@
 
 #include <iostream>
 #include <string>
-#include "Plane.h"
 #include "Passenger.h"
 #include "Flight.h"
 #include "Date.h"

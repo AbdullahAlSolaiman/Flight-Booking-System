@@ -8,7 +8,7 @@ using std::string;
 
 
 Flight::Flight(string Airline, string FlightType, string Source, string Destination, string FlightID,
-	 float Price, float Duration, Plane FlightPlane) {
+	 float Price, float Duration, string FlightPlane) {
 	_Airline = Airline;
 	_FlightID = FlightID;
 	_FlightType = FlightType;
@@ -16,13 +16,12 @@ Flight::Flight(string Airline, string FlightType, string Source, string Destinat
 	_Destination = Destination;
 	_Price = Price;
 	_Duration = Duration;
-	_FlightPlane = &FlightPlane;
+	_FlightPlane = FlightPlane;
 }
 
 Flight::Flight() {
-	_Airline = _FlightType = _Source = _FlightID = _Destination = "";
+	_Airline = _FlightType = _Source = _FlightID = _Destination = _FlightPlane = "";
 	_Duration = _Price = 0.0;
-	_FlightPlane = NULL;
 }
 
 void Flight::SetDate(string Day, string Month, string Year) {
@@ -79,12 +78,12 @@ float Flight::GetPrice() const {
 	return _Price;
 }
 
-void Flight::SetPlane(Plane plane) {
-	_FlightPlane = &plane;
+void Flight::SetPlane(string plane) {
+	_FlightPlane = plane;
 }
 
-Plane Flight::GetPlane() const {
-	return *_FlightPlane;
+string Flight::GetPlane() {
+	return _FlightPlane;
 }
 
 void Flight::SetDuration(float hours) {
@@ -95,9 +94,10 @@ float Flight::GetDuration() const {
 	return _Duration;
 }
 
-void Flight::PrintDetails() const {
+void Flight::PrintDetails() {
 	cout << "\tAirline: " << GetAirline() << endl
 		<< "\tFlight ID: " << GetFlightID() << endl
+		<< "\tFlight Model: " << GetPlane() << endl
 		<< "\tFlight Type: " << GetFlightType() << endl
 		<< "\tSource: " << GetSource() << endl
 		<< "\tDestination: " << GetDestination() << endl
@@ -107,6 +107,4 @@ void Flight::PrintDetails() const {
 	_DepartureDate.PrintDate();
 }
 
-Flight::~Flight() {
-	_FlightPlane = NULL;
-}
+Flight::~Flight() {}
