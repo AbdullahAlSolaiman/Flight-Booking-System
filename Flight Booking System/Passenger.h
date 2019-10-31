@@ -17,6 +17,7 @@ private:
 	int NumOfFlights;
 public:
 	Passenger();
+	Passenger(string, string, string);
 	void SetFirstName(string fname);
 	void SetLastName(string lname);
 	void SetPassPortNumber(string passnum);

@@ -8,7 +8,16 @@ using std::endl;
 
 Passenger::Passenger() {
 	NumOfFlights = 0;
-	cout << "Passenger has been created" << endl;
+	_FirstName = "";
+	_LastName = "";
+	_PassportNumber = "";
+}
+
+Passenger::Passenger(string FirstName, string LastName, string PassportNumber) {
+	NumOfFlights = 0;
+	_FirstName = FirstName;
+	_LastName = LastName;
+	_PassportNumber = PassportNumber;
 }
 
 void Passenger::SetFirstName(string FirstName) {
@@ -39,8 +48,11 @@ void Passenger::BookFlight(Flight MyFlight) {
 		cout << "Max bookings reached" << endl;
 		return;
 	}
-	else
+	else {
 		BookedFlights[NumOfFlights++] = &MyFlight;
+		cout << GetFirstName() << " " << GetLastName() << " have successfully booked flight " << MyFlight.GetFlightID()
+			<< " from " << MyFlight.GetSource() << " to " << MyFlight.GetDestination() << endl;
+	}
 }
 
 void Passenger::CancelFlight(string FlightNumber) {
@@ -65,5 +77,5 @@ void Passenger::CancelFlight(string FlightNumber) {
 	}
 }
 Passenger::~Passenger() {
-	cout << "Passenger has been destroyed" << endl;
+	cout << "logged out" << endl;
 }

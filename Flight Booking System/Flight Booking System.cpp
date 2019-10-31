@@ -3,6 +3,7 @@
 #include "Flight Booking System.h"
 
 int main() {
+	Passenger ThePassenger("Tareq", "Al-Ahdal", "1234567");
 	int Size = 27;
 	Flight* Flights = new Flight[Size];
 	LoadData(Flights);
@@ -22,7 +23,9 @@ int main() {
 			getline(cin, Destination);
 			cout << endl;
 
-			
+			Flight* Result = new Flight[Size];
+			int ResultArraySize = SequentialSearch(Source, Destination, Size, Flights, Result);
+
 			cout << "Sort it base on price or duration? (p/d): ";
 			char POrD;
 			cin >> POrD;
@@ -34,9 +37,9 @@ int main() {
 					<< "Choice: ";
 				cin >> Choice;
 				if (1 == Choice)
-					PriceLowestToHighest(Flights, Size);
+					PriceLowestToHighest(Result, ResultArraySize);
 				else if (2 == Choice)
-					PriceHighestToLowest(Flights, Size);
+					PriceHighestToLowest(Result, ResultArraySize);
 			}
 			else if ('d' == POrD) {
 				cout << "By Duration:" << endl
@@ -46,17 +49,20 @@ int main() {
 					<< "Choice: ";
 				cin >> Choice;
 				if (1 == Choice)
-					DurationShortestToLongest(Flights, Size);
+					DurationShortestToLongest(Result, ResultArraySize);
 				if (2 == Choice)
-					DurationLongestToShortest(Flights, Size);
+					DurationLongestToShortest(Result, ResultArraySize);
 			}
 
-			for (int i = 0; i < Size; i++) {
+			for (int i = 0; i < ResultArraySize; i++) {
 				cout << 1 + i << ")";
-				Flights[i].PrintDetails();
+				Result[i].PrintDetails();
 				cout << "----------------------------------" << endl;
 			}
-			break;
+			cout << "Choice: ";
+			cin >> Choice;
+			ThePassenger.BookFlight(Result[Choice - 1]);
+			goto TryAgain;
 		}
 		case 2: {
 			cout << "Test 2" << endl;
@@ -67,13 +73,12 @@ int main() {
 			break;
 		}
 		case 4: {
-			cout << "Test 4" << endl;
+			cout << "Logged out" << endl;
 			break;
 		}
 		default: {
 			cout << "Try again" << endl << endl;
 			goto TryAgain;
-			break;
 		}
 	}
 

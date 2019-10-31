@@ -15,5 +15,17 @@ int BinarySearch(string SearchKey, int ArraySize, const Flight array[]) {
 		else
 			Left = Middle + 1; // search is focused on the right side of the list
 	}
+	int ArrayOfMatches[7];
 	return index;
+}
+
+int SequentialSearch(string SearchKey1, string SearchKey2, int ArraySize, const Flight Array[], Flight matches[]) {
+	int j = 0;
+	for (int i = 0; i < ArraySize; i++) {
+
+		if (Array[i].GetSource() == SearchKey1)
+			if (Array[i].GetDestination() == SearchKey2)
+				matches[j++] = Array[i]; //matches stored in an array
+	}
+	return j; //total number of matches
 }
