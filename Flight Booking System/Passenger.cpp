@@ -13,11 +13,12 @@ Passenger::Passenger() {
 	_PassportNumber = "";
 }
 
-Passenger::Passenger(string FirstName, string LastName, string PassportNumber) {
+Passenger::Passenger(string FirstName, string LastName, string PassportNumber, string Password) {
 	NumOfFlights = 0;
 	_FirstName = FirstName;
 	_LastName = LastName;
 	_PassportNumber = PassportNumber;
+	_Password = Password;
 }
 
 void Passenger::SetFirstName(string FirstName) {
@@ -29,6 +30,14 @@ void Passenger::SetLastName(string LastName) {
 
 void Passenger::SetPassPortNumber(string PassNum) {
 	_PassportNumber = PassNum;
+}
+
+void Passenger::SetPassword(string Password) {
+	_Password = Password;
+}
+
+string Passenger::GetPassword() const {
+	return _Password;
 }
 
 string Passenger::GetFirstName() const {
@@ -84,6 +93,4 @@ void Passenger::CancelFlight(string FlightNumber) {
 		}
 	}
 }
-Passenger::~Passenger() {
-	cout << "logged out" << endl;
-}
+Passenger::~Passenger() {}

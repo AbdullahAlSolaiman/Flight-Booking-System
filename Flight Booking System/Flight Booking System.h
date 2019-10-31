@@ -17,6 +17,7 @@ using std::string;
 int MainMenu();
 void MergeSort(Flight[], int, int);
 int SequentialSearch(string, string, int, const Flight[], Flight[]);
+int findUser(Passenger[], string, string, string, int);
 void PriceHighestToLowest(Flight[], int);
 void PriceLowestToHighest(Flight[], int);
 void DurationLongestToShortest(Flight[], int);

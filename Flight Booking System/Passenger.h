@@ -13,15 +13,18 @@ private:
 	string _LastName;
 	Date _DateOfBirth;     // object that has int day, int month, int year
 	string _PassportNumber;
+	string _Password;
 	Flight* BookedFlights[MaxFlights];
 	int NumOfFlights;
 public:
 	Passenger();
-	Passenger(string, string, string);
+	Passenger(string, string, string, string);
 	void SetFirstName(string fname);
 	void SetLastName(string lname);
 	void SetPassPortNumber(string passnum);
+	void SetPassword(string);
 
+	string GetPassword() const;
 	string GetFirstName() const;
 	string GetLastName() const;
 	string GetPassportNumber() const;

@@ -3,8 +3,30 @@
 #include "Flight Booking System.h"
 
 int main() {
-	Passenger ThePassenger("Tareq", "Al-Ahdal", "1234567");
-	int Size = 27;
+	const int NumOfUsers = 3;
+	Passenger Users[NumOfUsers] = { Passenger("Abdullah", "AlSolaiman", "135789", "password123"), 
+				Passenger("Irfan", "Azim", "246810", "password321"),
+				Passenger("Tareq", "Al-Ahdal", "1234567", "myPassword") };
+
+	Login:
+	cout << "First Name: ";
+	string FName;
+	getline(cin, FName);
+	cout << "Last Name: ";
+	string LName;
+	getline(cin, LName);
+	cout << "Password: ";
+	string Pass;
+	getline(cin, Pass);
+	
+	int ID = findUser(Users, FName, LName, Pass, NumOfUsers);
+
+	if (ID == -1) {
+		cout << "Not Found" << endl;
+		goto Login;
+	}
+
+	const int Size = 27;
 	Flight* Flights = new Flight[Size];
 	LoadData(Flights);
 	MergeSort(Flights, 0, Size - 1); //Order all the flights alphabetically
@@ -61,23 +83,29 @@ int main() {
 			}
 			cout << "Choice: ";
 			cin >> Choice;
-			ThePassenger.BookFlight(Result[Choice - 1]);
+			Users[ID].BookFlight(Result[Choice - 1]);
 			goto TryAgain;
 		}
 		case 2: {
-			ThePassenger.ViewBookedFlights();
+			Users[ID].ViewBookedFlights();
 			goto TryAgain;
 		}
 		case 3: {
-			ThePassenger.ViewBookedFlights();
+			Users[ID].ViewBookedFlights();
 			cout << "Enter the number of the flight that you wish to cancel: ";
 			string CancelNum;
 			cin.ignore();
 			getline(cin, CancelNum);
-			ThePassenger.CancelFlight(CancelNum);
+			Users[ID].CancelFlight(CancelNum);
 			goto TryAgain;
 		}
 		case 4: {
+			cout << "Logged out" << endl;
+			cin.ignore();
+			goto Login;
+		}
+		case 5: {
+			cout << "Logged out" << endl;
 			break;
 		}
 		default: {
