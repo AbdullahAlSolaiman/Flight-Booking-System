@@ -26,7 +26,7 @@ int main() {
 			Flight* Result = new Flight[Size];
 			int ResultArraySize = SequentialSearch(Source, Destination, Size, Flights, Result);
 
-			cout << "Sort it base on price or duration? (p/d): ";
+			cout << "Sort it based on price or duration? (p/d): ";
 			char POrD;
 			cin >> POrD;
 			if ('p' == POrD) {
@@ -65,15 +65,19 @@ int main() {
 			goto TryAgain;
 		}
 		case 2: {
-			cout << "Test 2" << endl;
-			break;
+			ThePassenger.ViewBookedFlights();
+			goto TryAgain;
 		}
 		case 3: {
-			cout << "Test 3" << endl;
-			break;
+			ThePassenger.ViewBookedFlights();
+			cout << "Enter the number of the flight that you wish to cancel: ";
+			string CancelNum;
+			cin.ignore();
+			getline(cin, CancelNum);
+			ThePassenger.CancelFlight(CancelNum);
+			goto TryAgain;
 		}
 		case 4: {
-			cout << "Logged out" << endl;
 			break;
 		}
 		default: {

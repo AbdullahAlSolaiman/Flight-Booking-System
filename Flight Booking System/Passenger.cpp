@@ -43,7 +43,15 @@ string Passenger::GetPassportNumber() const {
 	return _PassportNumber;
 }
 
-void Passenger::BookFlight(Flight MyFlight) {
+void Passenger::ViewBookedFlights() const {
+	for (int i = 0; i < NumOfFlights; i++) {
+		cout << 1 + i << ")";
+		BookedFlights[i]->PrintDetails();
+		cout << "----------------------------------" << endl;
+	}
+}
+
+void Passenger::BookFlight(Flight &MyFlight) {
 	if (NumOfFlights == 7) {
 		cout << "Max bookings reached" << endl;
 		return;
@@ -65,7 +73,7 @@ void Passenger::CancelFlight(string FlightNumber) {
 			if (FlightNumber == BookedFlights[i]->GetFlightID()) {
 				BookedFlights[i] = NULL;
 				NumOfFlights--;
-				cout << "Flight " << FlightNumber << " is cancelled";
+				cout << "Flight " << FlightNumber << " is cancelled" << endl;
 				for (int j = i; j < NumOfFlights; j++) { //reorganizing the array after one of the elements is null
 					BookedFlights[j] = BookedFlights[j+1];
 				}

@@ -26,7 +26,8 @@ public:
 	string GetLastName() const;
 	string GetPassportNumber() const;
 
-	void BookFlight(Flight);
+	void ViewBookedFlights() const;
+	void BookFlight(Flight&);
 	void CancelFlight(string);
 	~Passenger();
 };
