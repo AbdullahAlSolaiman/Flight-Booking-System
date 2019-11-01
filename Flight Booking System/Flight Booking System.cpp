@@ -3,11 +3,16 @@
 #include "Flight Booking System.h"
 
 int main() {
+	const int Size = 27;
+	Flight* Flights = new Flight[Size];
+	LoadData(Flights);
+	MergeSort(Flights, 0, Size - 1); //Order all the flights alphabetically
+	
 	const int NumOfUsers = 3;
 	Passenger Users[NumOfUsers] = { Passenger("Abdullah", "AlSolaiman", "135789", "password123"), 
 				Passenger("Irfan", "Azim", "246810", "password321"),
 				Passenger("Tareq", "Al-Ahdal", "1234567", "myPassword") };
-
+	
 	Login:
 	cout << "First Name: ";
 	string FName;
@@ -20,21 +25,17 @@ int main() {
 	getline(cin, Pass);
 	
 	int ID = findUser(Users, FName, LName, Pass, NumOfUsers);
-
 	if (ID == -1) {
 		cout << "Not Found" << endl;
 		goto Login;
 	}
 
-	const int Size = 27;
-	Flight* Flights = new Flight[Size];
-	LoadData(Flights);
-	MergeSort(Flights, 0, Size - 1); //Order all the flights alphabetically
 	TryAgain:
 	int Choice = MainMenu();
 	
 	switch (Choice) {
 		case 1: {
+			SearchAgain:
 			cin.ignore();
 			cout << endl;
 			cout << "Source: ";
@@ -45,8 +46,12 @@ int main() {
 			getline(cin, Destination);
 			cout << endl;
 
-			Flight* Result = new Flight[Size];
+			Flight** Result = new Flight*[Size];
 			int ResultArraySize = SequentialSearch(Source, Destination, Size, Flights, Result);
+			if (ResultArraySize == 0) {
+				cout << "No Flights Found" << endl;
+				goto SearchAgain;
+			}
 
 			cout << "Sort it based on price or duration? (p/d): ";
 			char POrD;
@@ -78,12 +83,13 @@ int main() {
 
 			for (int i = 0; i < ResultArraySize; i++) {
 				cout << 1 + i << ")";
-				Result[i].PrintDetails();
+				Result[i]->PrintDetails();
 				cout << "----------------------------------" << endl;
 			}
 			cout << "Choice: ";
 			cin >> Choice;
-			Users[ID].BookFlight(Result[Choice - 1]);
+			Users[ID].BookFlight(*Result[Choice - 1]);
+			delete[] Result;
 			goto TryAgain;
 		}
 		case 2: {
@@ -113,6 +119,6 @@ int main() {
 			goto TryAgain;
 		}
 	}
-	delete [] Flights;
+	delete[] Flights;
 	return 0;
 }

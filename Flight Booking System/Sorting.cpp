@@ -44,14 +44,14 @@ void Merge(Flight Array[], int First, int Mid, int Last) {
 	delete [] TempArray;
 }
 
-void PriceLowestToHighest(Flight Array[], int ArraySize) {
+void PriceLowestToHighest(Flight* Array[], int ArraySize) {
 	bool Unsorted = true;
-	Flight Temp;
+	Flight* Temp;
 	//Acsending Order
 	for (int Pass = 1; (Pass < ArraySize) && Unsorted; Pass++) {
 		Unsorted = false;
 		for (int x = 0; x < ArraySize - Pass; x++) {
-			if (Array[x].GetPrice() > Array[x + 1].GetPrice()) {
+			if (Array[x]->GetPrice() > Array[x + 1]->GetPrice()) {
 				Temp = Array[x];
 				Array[x] = Array[x + 1];
 				Array[x + 1] = Temp;
@@ -61,14 +61,14 @@ void PriceLowestToHighest(Flight Array[], int ArraySize) {
 	}
 }
 
-void PriceHighestToLowest(Flight Array[], int ArraySize) {
+void PriceHighestToLowest(Flight* Array[], int ArraySize) {
 	bool Unsorted = true;
-	Flight Temp;
+	Flight* Temp;
 	//Descending Order
 	for (int Pass = 1; (Pass < ArraySize) && Unsorted; Pass++) {
 		Unsorted = false;
 		for (int x = 0; x < ArraySize - Pass; x++) {
-			if (Array[x].GetPrice() < Array[x + 1].GetPrice()) {
+			if (Array[x]->GetPrice() < Array[x + 1]->GetPrice()) {
 				Temp = Array[x];
 				Array[x] = Array[x + 1];
 				Array[x + 1] = Temp;
@@ -78,14 +78,14 @@ void PriceHighestToLowest(Flight Array[], int ArraySize) {
 	}
 }
 
-void DurationShortestToLongest(Flight Array[], int ArraySize) {
+void DurationShortestToLongest(Flight* Array[], int ArraySize) {
 	bool Unsorted = true;
-	Flight Temp;
+	Flight* Temp;
 	//Acscending Order
 	for (int Pass = 1; (Pass < ArraySize) && Unsorted; Pass++) {
 		Unsorted = false;
 		for (int x = 0; x < ArraySize - Pass; x++) {
-			if (Array[x].GetDuration() > Array[x + 1].GetDuration()) {
+			if (Array[x]->GetDuration() > Array[x + 1]->GetDuration()) {
 				Temp = Array[x];
 				Array[x] = Array[x + 1];
 				Array[x + 1] = Temp;
@@ -95,14 +95,14 @@ void DurationShortestToLongest(Flight Array[], int ArraySize) {
 	}
 }
  
-void DurationLongestToShortest(Flight Array[], int ArraySize) {
+void DurationLongestToShortest(Flight* Array[], int ArraySize) {
 	bool Unsorted = true;
-	Flight Temp;
+	Flight* Temp;
 	//Descending Order 
 	for (int Pass = 1; (Pass < ArraySize) && Unsorted; Pass++) {
 		Unsorted = false;
 		for (int x = 0; x < ArraySize - Pass; x++) {
-			if (Array[x].GetDuration() < Array[x + 1].GetDuration()) {
+			if (Array[x]->GetDuration() < Array[x + 1]->GetDuration()) {
 				Temp = Array[x];
 				Array[x] = Array[x + 1];
 				Array[x + 1] = Temp;

@@ -15,12 +15,12 @@ using std::string;
 
 int MainMenu();
 void MergeSort(Flight[], int, int);
-int SequentialSearch(string, string, int, const Flight[], Flight[]);
+int SequentialSearch(string, string, int, Flight[], Flight*[]);
 int findUser(Passenger[], string, string, string, int);
-void PriceHighestToLowest(Flight[], int);
-void PriceLowestToHighest(Flight[], int);
-void DurationLongestToShortest(Flight[], int);
-void DurationShortestToLongest(Flight[], int);
+void PriceHighestToLowest(Flight*[], int);
+void PriceLowestToHighest(Flight*[], int);
+void DurationLongestToShortest(Flight*[], int);
+void DurationShortestToLongest(Flight*[], int);
 void LoadData(Flight[]);
 // TODO: Reference additional headers your program requires here.
 

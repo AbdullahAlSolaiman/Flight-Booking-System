@@ -7,7 +7,7 @@ using std::endl;
 void LoadData(Flight Flights[]) {
 	std::fstream Read("C:\\Users\\Tareq\\source\\repos\\TareqPi\\Flight-Booking-System\\Flight Booking System\\4NovSnapshot.csv", std::ios::in);
 	if (Read.fail()) {
-		std::cout << "Error" << std::endl;
+		std::cout << "Error loading data" << std::endl;
 		exit(-1);
 	}
 	int Num = 0;

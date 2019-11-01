@@ -68,7 +68,7 @@ void Passenger::BookFlight(Flight &MyFlight) {
 	else {
 		BookedFlights[NumOfFlights++] = &MyFlight;
 		cout << GetFirstName() << " " << GetLastName() << " have successfully booked flight " << MyFlight.GetFlightID()
-			<< " from " << MyFlight.GetSource() << " to " << MyFlight.GetDestination() << endl;
+			<< " from " << MyFlight.GetSource() << " to " << MyFlight.GetDestination() << endl << endl;
 	}
 }
 
@@ -82,7 +82,7 @@ void Passenger::CancelFlight(string FlightNumber) {
 			if (FlightNumber == BookedFlights[i]->GetFlightID()) {
 				BookedFlights[i] = NULL;
 				NumOfFlights--;
-				cout << "Flight " << FlightNumber << " is cancelled" << endl;
+				cout << "Flight " << FlightNumber << " is cancelled" << endl << endl;
 				for (int j = i; j < NumOfFlights; j++) { //reorganizing the array after one of the elements is null
 					BookedFlights[j] = BookedFlights[j+1];
 				}
@@ -93,4 +93,7 @@ void Passenger::CancelFlight(string FlightNumber) {
 		}
 	}
 }
-Passenger::~Passenger() {}
+Passenger::~Passenger() {
+	if (NumOfFlights != 0)
+		delete[] BookedFlights;
+}
