@@ -52,16 +52,16 @@ string Passenger::GetPassportNumber() const {
 	return _PassportNumber;
 }
 
-void Passenger::ViewBookedFlights() const {
+bool Passenger::ViewBookedFlights() const {
 	if (NumOfFlights == 0) {
-		cout << "No booked flights" << endl << endl;
-		return;
+		return false;
 	}
 	for (int i = 0; i < NumOfFlights; i++) {
 		cout << 1 + i << ")";
 		BookedFlights[i]->PrintDetails();
 		cout << "----------------------------------" << endl;
 	}
+	return true;
 }
 
 void Passenger::BookFlight(Flight &MyFlight) {
@@ -77,27 +77,24 @@ void Passenger::BookFlight(Flight &MyFlight) {
 }
 
 void Passenger::CancelFlight(string FlightNumber) {
-	if (NumOfFlights == 0) {
-		cout << "No flights booked";
-		return;
-	}
-	else {
-		for (int i = 0; i < NumOfFlights; i++) { // sequential search
-			if (FlightNumber == BookedFlights[i]->GetFlightID()) {
-				BookedFlights[i] = NULL;
-				NumOfFlights--;
-				cout << "Flight " << FlightNumber << " is cancelled" << endl << endl;
-				for (int j = i; j < NumOfFlights; j++) { //reorganizing the array after one of the elements is null
-					BookedFlights[j] = BookedFlights[j+1];
-				}
-				return;
+	for (int i = 0; i < NumOfFlights; i++) { // sequential search
+		if (FlightNumber == BookedFlights[i]->GetFlightID()) {
+			BookedFlights[i] = NULL;
+			NumOfFlights--;
+			cout << "Flight " << FlightNumber << " is cancelled" << endl << endl;
+			for (int j = i; j < NumOfFlights; j++) { //reorganizing the array after one of the elements is null
+				BookedFlights[j] = BookedFlights[j+1];
 			}
-			if (i == NumOfFlights - 1)
-				cout << "Not Found" << endl;
+			return;
 		}
+		if (i == NumOfFlights - 1)
+			cout << "Not Found" << endl;
 	}
 }
+
 Passenger::~Passenger() {
 	if (NumOfFlights != 0)
-		delete[] BookedFlights;
+		for (int i = 0; i < NumOfFlights; i++) {
+			BookedFlights[i] = NULL;
+		}
 }

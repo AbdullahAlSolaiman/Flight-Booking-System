@@ -93,17 +93,26 @@ int main() {
 			goto TryAgain;
 		}
 		case 2: {
-			Users[ID].ViewBookedFlights();
-			goto TryAgain;
+			if (Users[ID].ViewBookedFlights())
+				goto TryAgain;
+			else {
+				cout << "No booked flights" << endl << endl;
+				goto TryAgain;
+			}
 		}
 		case 3: {
-			Users[ID].ViewBookedFlights();
-			cout << "Enter the flight ID that you wish to cancel: ";
-			string CancelNum;
-			cin.ignore();
-			getline(cin, CancelNum);
-			Users[ID].CancelFlight(CancelNum);
-			goto TryAgain;
+			if (Users[ID].ViewBookedFlights()) {
+				cout << "Enter the flight ID that you wish to cancel: ";
+				string CancelNum;
+				cin.ignore();
+				getline(cin, CancelNum);
+				Users[ID].CancelFlight(CancelNum);
+				goto TryAgain;
+			}
+			else {
+				cout << "No booked flights" << endl << endl;
+				goto TryAgain;
+			}
 		}
 		case 4: {
 			cout << "Logged out" << endl;
