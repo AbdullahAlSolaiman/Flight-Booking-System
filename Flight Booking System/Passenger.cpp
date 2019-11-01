@@ -53,6 +53,10 @@ string Passenger::GetPassportNumber() const {
 }
 
 void Passenger::ViewBookedFlights() const {
+	if (NumOfFlights == 0) {
+		cout << "No booked flights" << endl << endl;
+		return;
+	}
 	for (int i = 0; i < NumOfFlights; i++) {
 		cout << 1 + i << ")";
 		BookedFlights[i]->PrintDetails();
