@@ -2,6 +2,7 @@
 #ifndef FLIGHT_H
 #define FLIGHT_H
 
+#include "Plane.h"
 #include "Date.h"
 #include <string>
 using std::string;
@@ -16,7 +17,7 @@ class Flight {
 		string _Source;
 		string _Destination;
 		Date _DepartureDate;
-		string _FlightPlane;
+		Plane _FlightPlane;
 	public:
 		Flight(string, string, string, string, string, float, float, string);
 		Flight();
@@ -45,7 +46,7 @@ class Flight {
 		float GetPrice() const;
 
 		void SetPlane(string);
-		string GetPlane();
+		Plane GetPlane();
 
 		void PrintDetails();
 

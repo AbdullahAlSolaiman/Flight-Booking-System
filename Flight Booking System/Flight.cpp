@@ -16,11 +16,11 @@ Flight::Flight(string Airline, string FlightType, string Source, string Destinat
 	_Destination = Destination;
 	_Price = Price;
 	_Duration = Duration;
-	_FlightPlane = FlightPlane;
+	_FlightPlane.SetPlaneName(FlightPlane);
 }
 
 Flight::Flight() {
-	_Airline = _FlightType = _Source = _FlightID = _Destination = _FlightPlane = "";
+	_Airline = _FlightType = _Source = _FlightID = _Destination;
 	_Duration = _Price = 0.0;
 }
 
@@ -79,10 +79,10 @@ float Flight::GetPrice() const {
 }
 
 void Flight::SetPlane(string plane) {
-	_FlightPlane = plane;
+	_FlightPlane.SetPlaneName(plane);
 }
 
-string Flight::GetPlane() {
+Plane Flight::GetPlane() {
 	return _FlightPlane;
 }
 
@@ -97,7 +97,8 @@ float Flight::GetDuration() const {
 void Flight::PrintDetails() {
 	cout << "\tAirline: " << GetAirline() << endl
 		<< "\tFlight ID: " << GetFlightID() << endl
-		<< "\tFlight Model: " << GetPlane() << endl
+		<< "\tFlight Model: " << _FlightPlane.GetPlaneName() << endl
+		<< "\tFlight Capacity: " << _FlightPlane.GetPassengerCapacity() << endl
 		<< "\tFlight Type: " << GetFlightType() << endl
 		<< "\tSource: " << GetSource() << endl
 		<< "\tDestination: " << GetDestination() << endl
