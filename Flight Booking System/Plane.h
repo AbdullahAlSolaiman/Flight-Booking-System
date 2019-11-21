@@ -5,19 +5,19 @@
 using std::string;
 
 class Plane {
-private:
-	string _ModelName;
-	int _PassengerCapacity;
+	private:
+		string _ModelName;
+		int _PassengerCapacity;
 
-public:
-	Plane(string);
-	Plane();
-	void DetermineCapacity(string);
-	void SetPlaneName(string);
-	string GetPlaneName() const;
-	void SetPassengerCapacity(int);
-	int GetPassengerCapacity() const;
-	~Plane();
+	public:
+		Plane(string);
+		Plane();
+		void DetermineCapacity(string);
+		void SetPlaneName(string);
+		string GetPlaneName() const;
+		void SetPassengerCapacity(int);
+		int GetPassengerCapacity() const;
+		~Plane();
 };
 
 #endif
