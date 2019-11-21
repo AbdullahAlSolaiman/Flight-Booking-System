@@ -6,74 +6,45 @@ using std::cout;
 using std::endl;
 using std::string;
 
+Plane::Plane(string ModelName) {
+	_ModelName = ModelName;
+	this->DetermineCapacity(ModelName);
+}
 
 Plane::Plane() {
-	_AircraftInstanceID = _AircraftTypeID = _AircraftModelID = _ManufacturerID=0;
-	_ManufacturerName = "N\A";
-	_Airline = "N\A";
-}
-Plane::Plane(int PlaneNumber, int PlaneType, int PlaneModel, string name, int ManufacturerNumber, string AirlineName) {
-	_AircraftInstanceID = PlaneNumber;
-	_AircraftTypeID = PlaneType;
-	_AircraftModelID = PlaneModel;
-	_ManufacturerID = ManufacturerNumber;
-	_ManufacturerName = name;
-	_Airline = AirlineName;
-}
-void Plane::setAircraftInstanceID(int PlaneNumber)
-{
-	_AircraftInstanceID = PlaneNumber;
-}
-int Plane::getAircraftInstanceID()
-{
-	return _AircraftInstanceID;
-}
-void Plane::setAircraftTypeID(int PlaneType)
-{
-	_AircraftTypeID = PlaneType;
-}
-int Plane::getAircraftTypeID()
-{
-	return _AircraftTypeID;
-}
-void Plane::setAircraftModelID(int PlaneModel)
-{
-	_AircraftModelID = PlaneModel;
-}
-int Plane::getAircraftModelID()
-{
-	return _AircraftModelID;
-}
-void Plane::setManufacturerName(string name)
-{
-	_ManufacturerName = name;
-}
-string Plane::getManufacturerName()
-{
-	return _ManufacturerName;
-}
-void Plane::setManufacturerID(int ManufacturerNumber)
-{
-	_ManufacturerID = ManufacturerNumber;
-}
-int Plane::getManufacturerID()
-{
-	return _ManufacturerID;
-
-}
-void Plane::setAirline(string AirlineName)
-{
-	_Airline = AirlineName;
-}
-string Plane::getAirline()
-{
-	return _Airline;
+	_ModelName = "N\\A";
+	_PassengerCapacity = 0;
 }
 
-Plane::~Plane() {
-	std::cout << "Plane has been destroyed" << std::endl;
+void Plane::DetermineCapacity(string ModelName) {
+	if (ModelName == "Airbus A320")
+		_PassengerCapacity = 180;
+	else if (ModelName == "Airbus A380")
+		_PassengerCapacity = 868;
+	else if (ModelName == "Boeing 777")
+		_PassengerCapacity = 396;
+	else if (ModelName == "Boeing 737-700")
+		_PassengerCapacity = 126;
+	else if (ModelName == "Boeing 737-800")
+		_PassengerCapacity = 189;
+	else
+		_PassengerCapacity = -1;
 }
 
-void Plane::test() {
-	std::cout << "Testing Plane" << std::endl;
+void Plane::SetPlaneName(string Name) {
+	_ModelName = Name;
+	this->DetermineCapacity(Name);
 }
+
+string Plane::GetPlaneName() const {
+	return _ModelName;
+}
+
+void Plane::SetPassengerCapacity(int PassengerCapacity) {
+	_PassengerCapacity = PassengerCapacity;
+}
+int Plane::GetPassengerCapacity() const {
+	return _PassengerCapacity;
+}
+
+Plane::~Plane() {}

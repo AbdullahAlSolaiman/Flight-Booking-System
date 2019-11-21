@@ -9,8 +9,9 @@ int MainMenu() {
 		<< "---------------------------" << endl
 		<< "1. Book a Flight" << endl
 		<< "2. View Booked Flights" << endl
-		<< "3. Delete a Booked Flight" << endl
-		<< "4. Exit" << endl
+		<< "3. Cancel a Booked Flight" << endl
+		<< "4. Logout" << endl
+		<< "5. Exit" << endl
 		<< "---------------------------" << endl
 		<< "Choice: ";
 		int Choice;
